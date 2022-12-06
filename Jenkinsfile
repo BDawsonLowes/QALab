@@ -10,5 +10,11 @@ pipeline {
                 sh "ls"
             }
         }
+        stage('Build Stage') {
+            steps {
+                sh "chmod +x ./buildScript.sh"
+                sh "./buildScript.sh"
+            }
+        }
     }
 }
